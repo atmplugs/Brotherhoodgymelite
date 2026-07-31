@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html lang="en">
+<script>document.documentElement.className+=" js"</script>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="icon" href="data:image/png;base64,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">
+<title>Brotherhood Gym — Muay Thai in Jersey City, NJ</title>
+<meta name="description" content="Muay Thai in Jersey City. Sundays 2–4 PM for ages 6 and up, Wednesdays for adults 18+. $50 a month. 2822 John F Kennedy Blvd. Call (908) 768-4997.">
+
+<meta property="og:type" content="business.business">
+<meta property="og:title" content="Brotherhood Gym — Muay Thai in Jersey City">
+<meta property="og:description" content="Sundays 2–4 PM for ages 6 and up. Wednesdays for adults 18+. $50 a month. 2822 John F Kennedy Blvd, Jersey City NJ.">
+<meta property="og:locale" content="en_US">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#0A0A0A">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"SportsActivityLocation","name":"Brotherhood Gym",
+"description":"Muay Thai in Jersey City, NJ. Ages 6 and up on Sundays, adults 18 and up on Wednesdays.",
+"sport":"Muay Thai","telephone":"+1-908-768-4997","priceRange":"$50 per month",
+"address":{"@type":"PostalAddress","streetAddress":"2822 John F Kennedy Blvd","addressLocality":"Jersey City","addressRegion":"NJ","postalCode":"07306","addressCountry":"US"},
+"openingHoursSpecification":[{"@type":"OpeningHoursSpecification","dayOfWeek":"Sunday","opens":"14:00","closes":"16:00"}]}
+</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Barlow:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+<style>
+:root{
+  --crest:url("logo.webp");
+  --ink:#0A0A0A; --ink-2:#131211;
+  --white:#FFFFFF; --tan:#B27F4C; --tan-soft:#D8B87E; --tan-pale:#E4CDAF;
+  --line-d:rgba(255,255,255,.13); --line-l:rgba(10,10,10,.13);
+  --display:'Archivo Black',Impact,sans-serif;
+  --body:'Barlow',system-ui,sans-serif;
+  --mono:'IBM Plex Mono',ui-monospace,monospace;
+  --gut:clamp(20px,5vw,72px);
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{background:var(--ink);color:var(--white);font-family:var(--body);font-size:17px;line-height:1.55;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+a{color:inherit}
+svg,img{display:block;max-width:100%}
+::selection{background:var(--tan);color:#fff}
+:focus-visible{outline:2px solid var(--tan-soft);outline-offset:3px}
+
+.crest-lg,.crest-sm,.crest-ft{background:var(--crest) center/contain no-repeat;aspect-ratio:760/848;display:block}
+.crest-lg{height:clamp(146px,21vw,196px);margin-bottom:clamp(10px,1.8vw,18px);filter:drop-shadow(0 16px 40px rgba(0,0,0,.65))}
+.crest-sm{height:36px;flex-shrink:0}
+.crest-ft{height:88px;margin-left:auto;opacity:.95}
+
+.eyebrow{font-family:var(--mono);font-size:11.5px;letter-spacing:.22em;text-transform:uppercase;color:var(--tan-soft)}
+.sec-light .eyebrow{color:var(--tan)}
+h1,h2,h3{font-family:var(--display);font-weight:400;text-transform:uppercase;letter-spacing:-.02em;line-height:.94}
+h2{font-size:clamp(27px,5vw,46px)}
+h3{font-size:19px;letter-spacing:0}
+p{max-width:62ch}
+
+.wrap{max-width:1180px;margin:0 auto;padding-left:var(--gut);padding-right:var(--gut)}
+.sec{padding-top:clamp(44px,6.2vw,78px);padding-bottom:clamp(44px,6.2vw,78px)}
+.sec-light{background:var(--white);color:var(--ink)}
+.sec-head{margin-bottom:clamp(22px,3vw,36px)}
+.sec-head .eyebrow{display:block;margin-bottom:12px}
+.sec-head p{margin-top:14px;color:rgba(255,255,255,.62);font-size:17px}
+.sec-light .sec-head p{color:rgba(10,10,10,.66)}
+
+.nav{position:sticky;top:0;z-index:60;background:rgba(10,10,10,.88);backdrop-filter:blur(14px);border-bottom:1px solid var(--line-d)}
+.nav-in{display:flex;align-items:center;gap:20px;height:60px}
+.nav-brand{display:flex;align-items:center;gap:10px;text-decoration:none}
+.nav-brand span{font-family:var(--display);font-size:15px;letter-spacing:.02em}
+.nav-links{margin-left:auto;display:flex;gap:24px;font-family:var(--mono);font-size:12px;letter-spacing:.14em;text-transform:uppercase}
+.nav-links a{text-decoration:none;color:rgba(255,255,255,.66);transition:color .2s}
+.nav-links a:hover{color:var(--tan-soft)}
+.nav-call{background:var(--tan);color:#fff;text-decoration:none;font-family:var(--mono);font-size:12.5px;letter-spacing:.1em;padding:10px 16px;white-space:nowrap;transition:background .2s}
+.nav-call:hover{background:#C68E58}
+@media(max-width:880px){.nav-links{display:none}.nav-call{margin-left:auto}}
+
+.btn{display:inline-flex;align-items:center;justify-content:center;font-family:var(--mono);font-size:13px;letter-spacing:.1em;text-transform:uppercase;padding:16px 24px;text-decoration:none;border:1px solid transparent;cursor:pointer;transition:transform .18s,background .18s,color .18s,border-color .18s}
+.btn:hover{transform:translateY(-2px)}
+.btn-solid{background:var(--tan);color:#fff}
+.btn-solid:hover{background:#C68E58}
+.btn-ghost{border-color:rgba(255,255,255,.32);color:#fff;background:none}
+.btn-ghost:hover{border-color:var(--tan-soft);color:var(--tan-soft)}
+.sec-light .btn-ghost{border-color:var(--line-l);color:var(--ink)}
+.sec-light .btn-ghost:hover{border-color:var(--tan);color:var(--tan)}
+.btn-row{display:flex;flex-wrap:wrap;gap:12px}
+
+.hero{position:relative;padding-top:clamp(28px,4vw,48px);padding-bottom:0;overflow:hidden}
+.hero::before{content:'';position:absolute;top:-16%;left:50%;transform:translateX(-50%);width:min(980px,150%);height:640px;pointer-events:none;background:radial-gradient(ellipse at center,rgba(178,127,76,.2),transparent 66%)}
+.hero-in{position:relative;text-align:center;display:flex;flex-direction:column;align-items:center}
+.hero h1{font-size:clamp(38px,8.4vw,86px);line-height:.88;margin:14px 0 0}
+.hero h1 em{font-style:normal;color:var(--tan-soft)}
+.hero-sub{margin:18px auto 0;font-size:clamp(16.5px,2vw,19px);color:rgba(255,255,255,.72);max-width:50ch}
+.hero .btn-row{justify-content:center;margin-top:26px}
+
+.strip{border-top:1px solid var(--line-d);border-bottom:1px solid var(--line-d);margin-top:clamp(34px,4.5vw,54px)}
+.strip-in{display:grid;grid-template-columns:repeat(4,1fr);padding-top:0;padding-bottom:0}
+.strip-i{padding:20px 12px;text-align:center;border-left:1px solid var(--line-d)}
+.strip-i:first-child{border-left:0}
+.strip-i b{display:block;font-family:var(--display);font-size:clamp(16px,2.6vw,23px);letter-spacing:-.01em}
+.strip-i span{display:block;margin-top:6px;font-family:var(--mono);font-size:10px;letter-spacing:.16em;text-transform:uppercase;color:rgba(255,255,255,.44)}
+@media(max-width:700px){.strip-in{grid-template-columns:repeat(2,1fr)}.strip-i:nth-child(3){border-left:0}.strip-i:nth-child(n+3){border-top:1px solid var(--line-d)}}
+
+/* schedule */
+.sch{border-top:2px solid var(--ink)}
+.sch-row{display:grid;grid-template-columns:180px 1fr auto;gap:20px;align-items:center;padding:20px 0;border-bottom:1px solid var(--line-l)}
+.sch-day{font-family:var(--display);font-size:clamp(19px,2.5vw,26px);text-transform:uppercase;letter-spacing:-.01em}
+.sch-what b{font-family:var(--body);font-weight:600;font-size:17px;display:block}
+.sch-what small{display:block;font-size:15px;color:rgba(10,10,10,.55);margin-top:2px}
+.sch-time{font-family:var(--mono);font-size:clamp(14px,1.8vw,17px);color:var(--tan);white-space:nowrap;letter-spacing:.02em}
+.sch-price{display:flex;align-items:baseline;justify-content:space-between;gap:16px;flex-wrap:wrap;padding:22px 24px;background:var(--ink);color:#fff;margin-top:22px}
+.sch-price span{font-family:var(--mono);font-size:11.5px;letter-spacing:.2em;text-transform:uppercase;color:var(--tan-soft)}
+.sch-price b{font-family:var(--display);font-size:clamp(34px,6vw,54px);letter-spacing:-.02em;line-height:1}
+.sch-price b i{font-style:normal;font-size:clamp(14px,1.8vw,18px);color:var(--tan-soft);margin-left:6px}
+@media(max-width:700px){.sch-row{grid-template-columns:1fr auto;gap:6px 16px}.sch-day{grid-column:1/-1}}
+
+/* session bar */
+.tl-bar{display:flex;height:112px;position:relative;margin:34px 0 16px}
+.tl-seg{position:relative;display:flex;flex-direction:column;justify-content:flex-end;padding:14px 14px 15px;min-width:0}
+.tl-seg b{font-family:var(--display);font-size:clamp(13px,1.7vw,19px);text-transform:uppercase;letter-spacing:-.01em;line-height:1.02}
+.tl-seg i{font-style:normal;font-family:var(--mono);font-size:11px;letter-spacing:.14em;text-transform:uppercase;margin-top:6px;opacity:.72}
+.tl-seg .tick{position:absolute;top:-24px;left:0;font-family:var(--mono);font-size:12px;letter-spacing:.06em;color:var(--tan)}
+.tl-seg .tick.end{left:auto;right:0}
+.tl-seg::before{content:'';position:absolute;top:0;left:0;width:1px;height:9px;background:var(--tan)}
+.tl-1{flex:12.5 1 0;background:var(--tan-pale);color:var(--ink)}
+.tl-2{flex:62.5 1 0;background:var(--ink);color:#fff}
+.tl-3{flex:25 1 0;background:var(--tan);color:#fff}
+.tl-3::after{content:'';position:absolute;top:0;right:0;width:1px;height:9px;background:var(--tan)}
+@media(max-width:760px){
+  .tl-bar{flex-direction:column;height:auto;margin:14px 0 16px 56px}
+  .tl-seg{justify-content:center;padding:12px 16px}
+  .tl-1{flex:0 0 54px}.tl-2{flex:0 0 168px}.tl-3{flex:0 0 92px}
+  .tl-seg .tick{top:5px;left:-56px}
+  .tl-seg .tick.end{top:auto;bottom:5px;left:-56px;right:auto}
+  .tl-seg::before{width:9px;height:1px;left:-11px}
+  .tl-3::after{width:9px;height:1px;top:auto;bottom:0;right:auto;left:-11px}
+}
+
+.clip-split{display:grid;grid-template-columns:minmax(0,228px) 1fr;gap:clamp(24px,4vw,52px);align-items:center;margin-top:clamp(30px,4vw,48px)}
+.clip{background:#000;border:1px solid var(--line-l);position:relative;overflow:hidden}
+.clip video{width:100%;height:auto;display:block}
+.clip-cap{font-family:var(--mono);font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:rgba(10,10,10,.6);margin-top:10px}
+@media(max-width:820px){.clip-split{grid-template-columns:1fr;gap:26px}.clip{max-width:290px;margin:0 auto}.clip-cap{text-align:center}}
+
+/* coaches */
+.coaches{display:grid;grid-template-columns:repeat(2,1fr);gap:1px;background:var(--line-d);border:1px solid var(--line-d)}
+.coach{background:var(--ink);padding:clamp(24px,3vw,34px)}
+.coach .eyebrow{display:block;margin-bottom:12px}
+.coach h3{font-size:clamp(22px,3.2vw,32px);line-height:1}
+.coach p{color:rgba(255,255,255,.55);font-size:15.5px;margin-top:10px}
+@media(max-width:700px){.coaches{grid-template-columns:1fr}}
+
+.who{display:grid;grid-template-columns:repeat(4,1fr);gap:clamp(18px,2.4vw,30px);margin-top:clamp(26px,3.4vw,42px)}
+.who-i{border-top:1px solid var(--tan);padding-top:14px}
+.who-i b{display:block;font-family:var(--display);font-size:16px;text-transform:uppercase;letter-spacing:0;margin-bottom:6px}
+.who-i span{font-size:15px;color:rgba(255,255,255,.55);line-height:1.45;display:block}
+@media(max-width:840px){.who{grid-template-columns:repeat(2,1fr)}}
+
+.split{display:grid;grid-template-columns:1fr 1fr;gap:clamp(34px,5vw,68px);align-items:start}
+@media(max-width:900px){.split{grid-template-columns:1fr}}
+.addr{font-family:var(--display);font-size:clamp(24px,3.6vw,36px);line-height:1.06;margin:16px 0 6px;text-transform:uppercase}
+.addr-sub{font-family:var(--mono);font-size:13px;letter-spacing:.14em;color:rgba(255,255,255,.5);text-transform:uppercase;margin-bottom:22px}
+.tel{font-family:var(--display);font-size:clamp(24px,3.6vw,34px);text-decoration:none;letter-spacing:-.01em;display:inline-block;margin-top:4px;transition:color .2s}
+.tel:hover{color:var(--tan-soft)}
+.gear{margin-top:30px;padding-top:18px;border-top:1px solid var(--line-d);font-size:15.5px;color:rgba(255,255,255,.55)}
+.gear b{color:#fff;font-weight:600}
+
+.form{background:var(--ink-2);border:1px solid var(--line-d);padding:clamp(22px,3vw,32px)}
+.field{margin-bottom:15px}
+.field label{display:block;font-family:var(--mono);font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:rgba(255,255,255,.5);margin-bottom:7px}
+.field input,.field select,.field textarea{width:100%;background:var(--ink);border:1px solid var(--line-d);color:#fff;font-family:var(--body);font-size:16px;padding:12px 13px;border-radius:0}
+.field textarea{resize:vertical;min-height:66px}
+.field input:focus,.field select:focus,.field textarea:focus{border-color:var(--tan);outline:none}
+.form .btn{width:100%}
+.form-note{margin-top:12px;font-size:13.5px;color:rgba(255,255,255,.55);line-height:1.5}
+.preview{margin-top:14px;padding:13px;border:1px dashed var(--line-d);font-family:var(--mono);font-size:13px;line-height:1.55;color:var(--tan-soft);display:none;white-space:pre-wrap}
+.preview.on{display:block}
+
+.foot{border-top:1px solid var(--line-d);padding:34px 0 42px}
+.foot-in{display:flex;justify-content:space-between;gap:24px;flex-wrap:wrap;align-items:flex-end}
+.foot-brand{font-family:var(--display);font-size:20px;text-transform:uppercase}
+.foot p{font-family:var(--mono);font-size:11.5px;letter-spacing:.09em;color:rgba(255,255,255,.52);margin-top:9px;text-transform:uppercase;line-height:1.85}
+.foot a{text-decoration:none;color:rgba(255,255,255,.52);transition:color .2s}
+.foot a:hover{color:var(--tan-soft)}
+
+.js .rv{opacity:0;transform:translateY(18px);transition:opacity .6s ease,transform .6s cubic-bezier(.2,.7,.3,1)}
+.js .rv.in{opacity:1;transform:none}
+.hero .rv{transition-delay:var(--d,0s)}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.rv{opacity:1;transform:none;transition:none}.btn:hover{transform:none}}
+</style>
+</head>
+<body>
+
+<nav class="nav">
+  <div class="wrap nav-in">
+    <a class="nav-brand" href="#top" aria-label="Brotherhood Gym, home">
+      <i class="crest-sm" aria-hidden="true"></i><span>Brotherhood</span>
+    </a>
+    <div class="nav-links">
+      <a href="#schedule">Schedule</a>
+      <a href="#coaches">Coaches</a>
+      <a href="#find">Find Us</a>
+    </div>
+    <a class="nav-call" href="tel:+19087684997">Call (908) 768-4997</a>
+  </div>
+</nav>
+
+<header class="sec hero" id="top">
+  <div class="wrap hero-in">
+    <div class="crest-lg rv" style="--d:.05s" role="img" aria-label="Brotherhood Gym"></div>
+    <span class="eyebrow rv" style="--d:.14s">Jersey City, NJ &nbsp;·&nbsp; $50 a month</span>
+    <h1 class="rv" style="--d:.2s">Muay Thai<br><em>in Jersey City</em></h1>
+    <p class="hero-sub rv" style="--d:.3s">Sundays for ages 6 and up. Wednesdays for adults. Fifty dollars a month, and you can start any week with no experience at all.</p>
+    <div class="btn-row rv" style="--d:.38s">
+      <a class="btn btn-solid" href="tel:+19087684997">Call (908) 768-4997</a>
+      <a class="btn btn-ghost" href="#book">Book a spot</a>
+    </div>
+  </div>
+  <div class="strip">
+    <div class="wrap strip-in">
+      <div class="strip-i"><b>Sun 2–4</b><span>Ages 6 and up</span></div>
+      <div class="strip-i"><b>Wed</b><span>Adults 18+</span></div>
+      <div class="strip-i"><b>$50</b><span>Per month</span></div>
+      <div class="strip-i"><b>JFK Blvd</b><span>Jersey City</span></div>
+    </div>
+  </div>
+</header>
+
+<section class="sec sec-light" id="schedule">
+  <div class="wrap">
+    <div class="sec-head rv">
+      <span class="eyebrow">Two classes a week</span>
+      <h2>Schedule</h2>
+    </div>
+
+    <div class="sch rv">
+      <div class="sch-row">
+        <div class="sch-day">Sunday</div>
+        <div class="sch-what"><b>Muay Thai — ages 6 and up</b><small>All levels. Beginners welcome any week.</small></div>
+        <div class="sch-time">2:00 – 4:00 PM</div>
+      </div>
+      <div class="sch-row">
+        <div class="sch-day">Wednesday</div>
+        <div class="sch-what"><b>Adults only — 18 and up</b><small>All levels.</small></div>
+        <div class="sch-time">Call for time</div>
+      </div>
+      <div class="sch-price">
+        <span>Membership</span>
+        <b>$50<i>/ month</i></b>
+      </div>
+    </div>
+
+    <div class="rv clip-split">
+     <div>
+      <div class="clip">
+        <video id="clip" src="clip.mp4" poster="poster.jpg" controls playsinline preload="auto" muted loop
+               aria-label="Training at Brotherhood Gym"></video>
+      </div>
+      <div class="clip-cap">Inside the gym</div>
+     </div>
+     <div>
+      <span class="eyebrow">Inside the Sunday session</span>
+      <div class="tl-bar">
+        <div class="tl-seg tl-1"><span class="tick">2:00</span><b>Fitness</b><i>15 min</i></div>
+        <div class="tl-seg tl-2"><span class="tick">2:15</span><b>Technique &amp; new skills</b><i>75 min</i></div>
+        <div class="tl-seg tl-3"><span class="tick">3:30</span><span class="tick end">4:00</span><b>Sparring</b><i>30 min</i></div>
+      </div>
+      <p style="color:rgba(10,10,10,.62);font-size:16.5px">Conditioning to open, then the bulk of the session on technique — one strike broken down and drilled until it's yours. The last half hour is live rounds, controlled and matched to your level. Nobody gets thrown in over their head.</p>
+     </div>
+    </div>
+  </div>
+</section>
+
+<section class="sec" id="coaches">
+  <div class="wrap">
+    <div class="sec-head rv">
+      <span class="eyebrow">Coaching</span>
+      <h2>Who you'll train with</h2>
+    </div>
+    <div class="coaches rv">
+      <div class="coach">
+        <span class="eyebrow">Head Coach</span>
+        <h3>Abdelhamed Mohamed</h3>
+      </div>
+      <div class="coach">
+        <span class="eyebrow">Assistant Coach</span>
+        <h3>Anas Mohamed</h3>
+      </div>
+    </div>
+
+    <div class="who rv">
+      <div class="who-i"><b>Kids</b><span>From age 6. Discipline before contact.</span></div>
+      <div class="who-i"><b>First-timers</b><span>Everyone starts on the pads. Nobody was born knowing this.</span></div>
+      <div class="who-i"><b>Adults</b><span>Real work, twice a week if you want it.</span></div>
+      <div class="who-i"><b>Experienced</b><span>Bring what you know. We'll sharpen it.</span></div>
+    </div>
+  </div>
+</section>
+
+<section class="sec" id="find" style="background:var(--ink-2)">
+  <div class="wrap split">
+    <div class="rv">
+      <span class="eyebrow">Find us</span>
+      <div class="addr">2822 John F<br>Kennedy Blvd</div>
+      <div class="addr-sub">Jersey City, NJ 07306</div>
+      <div class="btn-row">
+        <a class="btn btn-ghost" href="https://www.google.com/maps/dir/?api=1&destination=2822+John+F+Kennedy+Blvd+Jersey+City+NJ+07306" target="_blank" rel="noopener">Get directions</a>
+      </div>
+      <div style="margin-top:32px">
+        <span class="eyebrow">Call the gym</span><br>
+        <a class="tel" href="tel:+19087684997">(908) 768-4997</a>
+      </div>
+      <p class="gear"><b>First class?</b> Shorts and a t-shirt, and we train barefoot — no shoes on the mats. Don't buy gloves yet; call ahead and we'll sort you out for the day.</p>
+    </div>
+
+    <div class="rv" id="book">
+      <span class="eyebrow">Book a spot</span>
+      <h2 style="margin:12px 0 18px">Reserve<br>your class</h2>
+      <div class="form">
+        <div class="field">
+          <label for="f-name">Your name</label>
+          <input id="f-name" type="text" autocomplete="name" placeholder="First and last">
+        </div>
+        <div class="field">
+          <label for="f-day">Which class</label>
+          <select id="f-day">
+            <option>Sunday, 2–4 PM (ages 6 and up)</option>
+            <option>Wednesday (adults 18+)</option>
+            <option>Not sure yet</option>
+          </select>
+        </div>
+        <div class="field">
+          <label for="f-who">Who's training</label>
+          <select id="f-who">
+            <option>Me — adult</option>
+            <option>My child, age 6–12</option>
+            <option>My teen, 13–17</option>
+            <option>More than one of us</option>
+          </select>
+        </div>
+        <div class="field">
+          <label for="f-exp">Experience</label>
+          <select id="f-exp">
+            <option>Complete beginner</option>
+            <option>Some striking experience</option>
+            <option>Trained before, coming back</option>
+            <option>Currently training elsewhere</option>
+          </select>
+        </div>
+        <button class="btn btn-solid" id="f-send" type="button">Send as a text message</button>
+        <p class="form-note">Opens your messaging app with the details filled in — you just hit send. Prefer to talk? Call <a href="tel:+19087684997" style="color:var(--tan-soft)">(908) 768-4997</a>.</p>
+        <div class="preview" id="f-prev"></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer class="foot">
+  <div class="wrap foot-in">
+    <div>
+      <div class="foot-brand">Brotherhood Gym</div>
+      <p>
+        Muay Thai · Jersey City, NJ<br>
+        2822 John F Kennedy Blvd, Jersey City, NJ 07306<br>
+        <a href="tel:+19087684997">(908) 768-4997</a> · Sundays 2–4 PM · Wednesdays, adults 18+ · $50/month
+      </p>
+    </div>
+    <div style="text-align:right"><i class="crest-ft" aria-hidden="true"></i></div>
+  </div>
+</footer>
+
+<script>
+(function(){
+  var els=document.querySelectorAll('.rv');
+  var showAll=function(){els.forEach(function(e){e.classList.add('in')})};
+  setTimeout(showAll,3000);
+  try{
+  if(!('IntersectionObserver' in window)||matchMedia('(prefers-reduced-motion: reduce)').matches){
+    els.forEach(function(e){e.classList.add('in')});return;
+  }
+  document.querySelectorAll('.hero .rv').forEach(function(e){requestAnimationFrame(function(){e.classList.add('in')})});
+  var io=new IntersectionObserver(function(en){en.forEach(function(x){
+    if(x.isIntersecting){x.target.classList.add('in');io.unobserve(x.target)}
+  })},{threshold:.1,rootMargin:'0px 0px -6% 0px'});
+  els.forEach(function(e){if(!e.closest('.hero'))io.observe(e)});
+  }catch(err){showAll()}
+})();
+
+(function(){
+  var PHONE='+19087684997', prev=document.getElementById('f-prev');
+  document.getElementById('f-name').addEventListener('keydown',function(e){
+    if(e.key==='Enter'){e.preventDefault();document.getElementById('f-send').click()}
+  });
+  document.getElementById('f-send').addEventListener('click',function(){
+    var name=document.getElementById('f-name').value.trim();
+    if(!name){
+      document.getElementById('f-name').focus();
+      prev.textContent='Add your name first, then send.';prev.classList.add('on');return;
+    }
+    var msg='Hi Brotherhood Gym — I\'d like to book a class.\n\n'
+      +'Name: '+name+'\n'
+      +'Class: '+document.getElementById('f-day').value+'\n'
+      +'Training: '+document.getElementById('f-who').value+'\n'
+      +'Experience: '+document.getElementById('f-exp').value;
+    prev.textContent=msg;prev.classList.add('on');
+    var sep=/iPhone|iPad|iPod|Macintosh/i.test(navigator.userAgent)?'&':'?';
+    window.location.href='sms:'+PHONE+sep+'body='+encodeURIComponent(msg);
+  });
+})();
+</script>
+</body>
+</html>
